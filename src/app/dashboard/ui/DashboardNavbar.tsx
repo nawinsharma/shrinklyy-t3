@@ -10,6 +10,7 @@ import Profile from '@/app/dashboard/ui/Profile'
 import Logo from '@/components/Logo'
 
 import { LogOut } from 'lucide-react'
+import { ModeToggle } from '@/components/ModeToggle'
 
 const DashboardNavbar = ({ image, name }: User) => {
   const handleSignOut = async () => {
@@ -21,6 +22,7 @@ const DashboardNavbar = ({ image, name }: User) => {
       <Logo />
       <menu className='flex items-center gap-2'>
         <Profile image={image} name={name} />
+        <ModeToggle />
         <Button
           variant='destructive'
           className='bg-red-500 hover:bg-red-600'
@@ -29,6 +31,7 @@ const DashboardNavbar = ({ image, name }: User) => {
         >
           <LogOut className='h-5 w-5' />
         </Button>
+
       </menu>
     </nav>
   )

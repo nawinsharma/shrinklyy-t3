@@ -9,7 +9,7 @@ const SignInWithGitHubButton = () => {
     await signIn('github', { callbackUrl: '/dashboard' })
   }
 
-  return <Button onClick={handleSignInWithGitHub}>Sign in</Button>
+  return <Button  className="mt-4 animate-fade-up animate-delay-200" onClick={handleSignInWithGitHub}>Sign in</Button>
 }
 
 export default SignInWithGitHubButton

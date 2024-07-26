@@ -24,10 +24,10 @@ const ShortLinkCard = ({
   id,
 }: Props) => {
   const name = alias ?? code
-  const shortLinkUrl = `${env.NEXT_PUBLIC_HOST}/${name}`
+  const shortLinkUrl = `${process.env.NEXT_PUBLIC_HOST}/${name}`
 
   return (
-    <article className='group/card relative rounded-lg border-b border-gray-300 bg-gradient-to-b from-gray-100 to-transparent p-3.5 hover:from-gray-200/80'>
+    <article className='group/card relative rounded-lg border-b border-gray-300 p-3.5 bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-950'>
       <h6 className='flex'>
         <TbWorld fontSize='1.6rem' className='self-start' />
 
@@ -42,13 +42,13 @@ const ShortLinkCard = ({
         shortLinkUrl={shortLinkUrl}
       />
 
-      <p className='mb-1 w-full overflow-hidden text-ellipsis text-nowrap text-sm font-medium text-gray-500'>
+      <p className='mb-1 w-full overflow-hidden text-ellipsis text-nowrap text-sm font-medium'>
         {originalUrl}
       </p>
 
       <p className='text-xs'>{description}</p>
 
-      <span className='text-xs font-semibold text-gray-600'>
+      <span className='text-xs font-semibold'>
         {getTimeAgo(createdAt)}
       </span>
     </article>

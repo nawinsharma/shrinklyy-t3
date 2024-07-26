@@ -4,11 +4,11 @@ import '@/styles/globals.css'
 import { TRPCReactProvider } from '@/trpc/react'
 
 import { Toaster } from '@/components/ui/toaster'
-import MadeBy from '@/components/MadeBy'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata = {
-  title: 'CutLink',
-  description: 'Shortener URL, made by Emerzon Javier Kolki Martinez',
+  title: 'Url-shortner',
+  description: 'Shortener URL',
   icons: [{ rel: 'icon', url: '/favicon.png' }],
 }
 
@@ -20,8 +20,16 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`font-sans relative min-h-screen`}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-        <MadeBy />
+        <TRPCReactProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </TRPCReactProvider>
         <Toaster />
       </body>
     </html>

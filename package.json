@@ -1,5 +1,5 @@
 {
-  "name": "cutlink_app",
+  "name": "shortner",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -34,6 +34,7 @@
     "lucide-react": "^0.363.0",
     "next": "^14.2.10",
     "next-auth": "^4.24.6",
+    "next-themes": "^0.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.51.0",

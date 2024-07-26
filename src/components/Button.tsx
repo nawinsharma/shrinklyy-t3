@@ -10,7 +10,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ children, className, startIcon, ...props }: Props) => {
   return (
     <button
-      className={`flex items-center justify-center gap-2 rounded bg-gray-200 px-4 py-1.5 transition-colors hover:bg-gray-300 active:bg-gray-400 ${className}`}
+      className={`flex items-center justify-center gap-2 rounded bg-gray-200 dark:bg-gray-700 cursor-pointer dark:hover:bg-gray-950 px-4 py-1.5 transition-colors hover:bg-gray-300 active:bg-gray-400 ${className}`}
       {...props}
     >
       {startIcon}

@@ -14,6 +14,7 @@ const CopyShortLinkUrlMenuItem = ({ shortLinkUrl }: Props) => {
     await navigator.clipboard.writeText(shortLinkUrl)
     toast({
       title: 'Copied link',
+      variant: 'success'
     })
   }
 

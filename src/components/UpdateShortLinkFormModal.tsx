@@ -72,6 +72,7 @@ const UpdateShortLinkFormModal = ({
           {...register('alias')}
           defaultValue={defaultValues?.alias ?? ''}
           placeholder='Alias'
+          className='bg-gray-100 dark:bg-gray-800 text-black dark:text-white'
           error={!!errors.alias}
           errorMessage={errors.alias?.message}
         />
@@ -81,6 +82,7 @@ const UpdateShortLinkFormModal = ({
           fullWidth
           {...register('description')}
           placeholder='Description'
+          className='bg-gray-100 dark:bg-gray-800 text-black dark:text-white'
           error={!!errors.description}
           errorMessage={errors.description?.message}
         />

@@ -20,6 +20,7 @@ const CopyShortLinkUrlIconButton = ({ shortLinkUrl }: Props) => {
     await navigator.clipboard.writeText(shortLinkUrl)
     toast({
       title: 'Copied link',
+      variant: 'success'
     })
   }
 
@@ -32,7 +33,7 @@ const CopyShortLinkUrlIconButton = ({ shortLinkUrl }: Props) => {
             onClick={handleCopyShortLinkUrl}
           />
         </TooltipTrigger>
-        <TooltipContent side='bottom' className='bg-slate-50 px-2.5 py-2'>
+        <TooltipContent side='bottom' className='px-2.5 py-2'>
           <p className='p-0 text-xs'>Copy</p>
         </TooltipContent>
       </TooltipShad>

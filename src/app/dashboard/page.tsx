@@ -30,7 +30,7 @@ export default function DashboardPage() {
             startIcon={<IoIosSearch fontSize="1.4rem" />}
             placeholder="Search short links..."
             containerClasses="flex-grow"
-            className="w-full text-black dark:text-white bg-gray-200 dark:bg-gray-800 border-gray-700 placeholder-gray-800 dark:placeholder-gray-700 focus:ring-2 focus:ring-blue-500"
+            className="w-full text-black dark:text-white bg-gray-200 dark:bg-gray-800 border-gray-700 placeholder-gray-800 dark:placeholder-gray-500 focus:ring-2 focus:ring-blue-500"
           />
           <CreateShortLinkModalButton />
         </article>

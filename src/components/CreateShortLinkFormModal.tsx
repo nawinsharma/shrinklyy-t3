@@ -64,12 +64,14 @@ const CreateShortLinkFormModal: FC<Props> = ({ onClose }) => {
           <Input
             fullWidth
             placeholder='Original URL*'
+            className='text-black dark:text-white'
             {...register('originalUrl')}
             error={Boolean(errors.originalUrl)}
             errorMessage={errors.originalUrl?.message}
           />
           <Input
             fullWidth
+            className='text-black dark:text-white'
             placeholder='Alias'
             {...register('alias')}
             error={Boolean(errors.alias)}
@@ -80,6 +82,7 @@ const CreateShortLinkFormModal: FC<Props> = ({ onClose }) => {
         <Input
           fullWidth
           placeholder='Description'
+          className='text-black dark:text-white'
           multiline
           {...register('description')}
           error={Boolean(errors.description)}

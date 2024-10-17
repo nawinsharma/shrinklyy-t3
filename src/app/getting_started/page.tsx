@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { getServerAuthSession } from '@/server/auth';
 
 import SignInWithGitHubButton from '@/components/SignInWithGitHubButton';
+import SignInWithGoogleButton from '@/components/SignInWithGoogle';
 
 export default async function GettingStartedPage() {
   const session = await getServerAuthSession();
@@ -28,7 +29,7 @@ export default async function GettingStartedPage() {
       </h2>
 
       <SignInWithGitHubButton />
-
+      <SignInWithGoogleButton />
       <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
         By signing up, you agree to our{' '}
         <Link

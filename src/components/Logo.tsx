@@ -9,7 +9,7 @@ const Logo = () => {
       className='flex w-fit items-center justify-center gap-1 text-2xl'
     >
       <MdLink fontSize='2.2rem' />
-      <span className='font-semibold'>URL_SHORTNER</span>
+      <span className='font-semibold'>Shrinklyyy</span>
     </Link>
   )
 }

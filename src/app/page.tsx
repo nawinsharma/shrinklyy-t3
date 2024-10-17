@@ -30,7 +30,7 @@ export default async function Home() {
         </p>
 
         <Link href="/getting_started">
-          <Button className="mt-6 px-8 py-4 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-lg dark:bg-blue-400 dark:hover:bg-blue-500">
+          <Button className="mt-6 px-8 py-4 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-black dark:text-white  rounded-lg dark:bg-blue-400 dark:hover:bg-blue-500">
             Start Shortening
           </Button>
         </Link>

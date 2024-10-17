@@ -1,29 +1,80 @@
-# Create T3 App
+# Shrinklyy
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Shrinklyy is a URL shortening service built with the T3 stack, designed to make long URLs shorter and more manageable. It offers a seamless user experience with secure authentication, database management, and validation, leveraging modern technologies like Next.js, tRPC, and Prisma.
 
-## What's next? How do I make an app with this?
+## Tech Stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This project is built using the **T3 Stack**, a powerful combination of technologies that provide full flexibility and scalability.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **Next.js**: The React framework for production, providing server-side rendering and API routes.
+- **NextAuth**: For secure authentication with support for multiple providers.
+- **tRPC**: Type-safe API development with minimal boilerplate.
+- **Prisma**: ORM for type-safe database access.
+- **PostgreSQL**: The relational database used for storing URLs, user sessions, and other data.
+- **Zod**: For schema validation and TypeScript-first approach to runtime type checking.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Features
 
-## Learn More
+- **URL Shortening**: Convert long URLs into short, shareable links.
+- **User Authentication**: Secure login using NextAuth with different authentication providers.
+- **Custom Links**: Users can create custom short links with their own preferred alias.
+- **Analytics**: Track click counts and other analytics on shortened URLs.
+- **Validation**: Ensure that all inputs, like URLs and custom aliases, meet the required criteria using Zod validation.
+- **API Endpoints**: Expose API routes using tRPC for fast, type-safe communication between the frontend and backend.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Prerequisites
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+To run the project locally, ensure you have the following tools installed:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Node.js (v18 or later)
+- PostgreSQL (set up a local database or use a remote instance)
+- Yarn or npm (preferred package manager)
 
-## How do I deploy this?
+## Getting Started
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/shrinklyy.git
+cd shrinklyy
+2. Install Dependencies
+bash
+Copy code
+yarn install
+3. Set Up Environment Variables
+Create a .env file at the root of the project with the following variables:
+
+bash
+Copy code
+DATABASE_URL=postgresql://user:password@localhost:5432/shrinklyy
+NEXTAUTH_SECRET=your-nextauth-secret
+NEXTAUTH_URL=http://localhost:3000
+4. Migrate the Database
+Run Prisma migrations to set up the database schema:
+
+bash
+Copy code
+npx prisma migrate dev
+5. Start the Development Server
+Run the application in development mode:
+
+bash
+Copy code
+yarn dev
+The app should now be running at http://localhost:3000.
+
+Contributing
+Feel free to contribute by opening an issue or submitting a pull request! Make sure to follow the contribution guidelines.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+vbnet
+Copy code
+
+You can adjust the instructions based on your actual setup (e.g., custom environment variables or additional dependencies).
+
+
+
+
+

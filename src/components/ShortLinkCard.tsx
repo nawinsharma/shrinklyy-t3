@@ -4,7 +4,6 @@ import CopyShortLinkUrlIconButton from '@/components/CopyShortLinkUrlIconButton'
 import { getTimeAgo } from '@/lib/timeAgo'
 
 import { TbWorld } from 'react-icons/tb'
-import { env } from '@/env'
 
 interface Props {
   code: string

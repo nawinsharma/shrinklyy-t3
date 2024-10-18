@@ -6,7 +6,7 @@ import { getServerAuthSession } from '@/server/auth';
 import SignInWithGitHubButton from '@/components/SignInWithGitHubButton';
 import SignInWithGoogleButton from '@/components/SignInWithGoogle';
 
-export default async function GettingStartedPage() {
+ export default async function auth() {
   const session = await getServerAuthSession();
 
   if (session) redirect('/dashboard');

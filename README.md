@@ -1,6 +1,6 @@
 # Shrinklyy
 
-Shrinklyy is a URL shortening service built with the T3 stack, designed to make long URLs shorter and more manageable. It offers a seamless user experience with secure authentication, database management, and validation, leveraging modern technologies like Next.js, tRPC, and Prisma.
+Shrinklyy <a href="https://trim.nawin.xyz" target="_blank">trim.nawin.xyz</a> is a URL shortening service built with the T3 stack, designed to make long URLs shorter and more manageable. It offers a seamless user experience with secure authentication, database management, and validation, leveraging modern technologies like Next.js, tRPC, and Prisma.
 
 ## Tech Stack
 

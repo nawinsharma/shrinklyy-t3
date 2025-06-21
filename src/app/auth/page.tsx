@@ -1,9 +1,7 @@
 "use client";
 
-import LandingNavbar from "@/components/LandingNavbar";
 import AnimatedGradient from "@/components/AnimatedGradient";
 import ElegantShape from "@/components/ElegantShape";
-import HoverTextReveal from "@/components/HoverTextReveal";
 import SignInWithGitHubButton from "@/components/SignInWithGitHubButton";
 import SignInWithGoogleButton from "@/components/SignInWithGoogle";
 import Link from "next/link";
@@ -53,10 +51,12 @@ export default function AuthPage() {
           className="right-[15%] top-[10%] md:right-[20%] md:top-[15%]"
         />
       </div>
-
       <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center justify-center">
         <div className="mx-auto max-w-2xl w-full">
           <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 backdrop-blur-sm md:p-8 shadow-lg">
+            <Link href="/" className="mb-6 inline-block">
+              <span className="text-white font-bold text-md underline hover:text-blue-700">Home</span>
+            </Link>
             <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:mb-6 md:text-5xl bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent text-center">
               Get Started Now!
             </h1>

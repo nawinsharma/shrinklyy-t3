@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Zap } from 'lucide-react'
-import LandingNavbar from '@/components/LandingNavbar'
 import AnimatedGradient from '@/components/AnimatedGradient'
 import ElegantShape from '@/components/ElegantShape'
 import HoverTextReveal from '@/components/HoverTextReveal'
@@ -20,7 +19,6 @@ function Home() {
 
   return (
     <div className='relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#030303]'>
-      <LandingNavbar />
       {/* Animated Background Gradient */}
       <AnimatedGradient
         colors={['#3B82F6', '#8B5CF6', '#06B6D4', '#10B981']}

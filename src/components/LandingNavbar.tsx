@@ -10,7 +10,6 @@ const LandingNavbar = () => {
       <Logo />
 
       <div className='flex items-center gap-2'>
-        {/* <SignInWithGitHubButton /> */}
     
         <Link href='https://github.com/nawinkumarsharma/url-shortner' target='_blank'>
           <IoLogoGithub fontSize='2.5rem' />

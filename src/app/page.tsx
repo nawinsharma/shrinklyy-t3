@@ -161,11 +161,11 @@ function Home() {
               <div className='space-y-3 text-left'>
                 <div className='text-sm text-white/40'>Original URL:</div>
                 <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-sm text-white/60'>
-                  https://example.com/very/long/url/that/needs/shortening
+                  https://example.com/very/long/url/that/needs/shortening/take/a/look/at/this/url/njadcndndksajcnasjkcmkds
                 </div>
                 <div className='text-sm text-white/40'>Shortened URL:</div>
                 <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-sm text-blue-400'>
-                  shrinklyyy.com/abc123
+                  trim.nawin.xyz/short
                 </div>
               </div>
             </div>

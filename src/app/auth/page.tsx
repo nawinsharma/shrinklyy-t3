@@ -1,51 +1,76 @@
-import Link from 'next/link';
-import { redirect } from 'next/navigation';
+"use client";
 
-import { getServerAuthSession } from '@/server/auth';
+import LandingNavbar from "@/components/LandingNavbar";
+import AnimatedGradient from "@/components/AnimatedGradient";
+import ElegantShape from "@/components/ElegantShape";
+import HoverTextReveal from "@/components/HoverTextReveal";
+import SignInWithGitHubButton from "@/components/SignInWithGitHubButton";
+import SignInWithGoogleButton from "@/components/SignInWithGoogle";
+import Link from "next/link";
 
-import SignInWithGitHubButton from '@/components/SignInWithGitHubButton';
-import SignInWithGoogleButton from '@/components/SignInWithGoogle';
-
- export default async function auth() {
-  const session = await getServerAuthSession();
-
-  if (session) redirect('/dashboard');
+export default function AuthPage() {
 
   return (
-    <section className="flex h-screen flex-col items-center justify-center gap-6 px-4 bg-gradient-to-r from-blue-50 via-white to-gray-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950">
-      <h1 className="text-5xl font-extrabold text-gray-800 dark:text-gray-100 text-center animate-fade-up">
-        Get Started Now! 🤩
-      </h1>
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#030303]">
+      <AnimatedGradient
+        colors={["#3B82F6", "#8B5CF6", "#06B6D4", "#10B981"]}
+        speed={0.3}
+        blur="heavy"
+      />
 
-      <h2 className="text-lg text-gray-600 dark:text-gray-300 text-center animate-fade-up animate-delay-100">
-        Sign in quickly using{' '}
-        <Link
-          href="https://github.com/"
-          target="_blank"
-          className="font-semibold text-blue-500 underline decoration-blue-500 underline-offset-4 transition-colors duration-200 ease-in-out hover:text-blue-700 hover:decoration-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:hover:decoration-blue-500"
-        >
-          GitHub
-        </Link>
-      </h2>
+      {/* Floating Shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <ElegantShape
+          delay={0.3}
+          width={600}
+          height={140}
+          rotate={12}
+          gradient="from-blue-500/[0.15]"
+          className="left-[-10%] top-[15%] md:left-[-5%] md:top-[20%]"
+        />
+        <ElegantShape
+          delay={0.5}
+          width={500}
+          height={120}
+          rotate={-15}
+          gradient="from-purple-500/[0.15]"
+          className="right-[-5%] top-[70%] md:right-[0%] md:top-[75%]"
+        />
+        <ElegantShape
+          delay={0.4}
+          width={300}
+          height={80}
+          rotate={-8}
+          gradient="from-cyan-500/[0.15]"
+          className="bottom-[5%] left-[5%] md:bottom-[10%] md:left-[10%]"
+        />
+        <ElegantShape
+          delay={0.6}
+          width={200}
+          height={60}
+          rotate={20}
+          gradient="from-emerald-500/[0.15]"
+          className="right-[15%] top-[10%] md:right-[20%] md:top-[15%]"
+        />
+      </div>
 
-      <SignInWithGitHubButton />
-      <SignInWithGoogleButton />
-      <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-        By signing up, you agree to our{' '}
-        <Link
-          href="/terms"
-          className="underline text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
-        >
-          Terms of Service
-        </Link>{' '}
-        and{' '}
-        <Link
-          href="/privacy"
-          className="underline text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
-        >
-          Privacy Policy
-        </Link>.
-      </p>
-    </section>
+      <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-2xl w-full">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 backdrop-blur-sm md:p-8 shadow-lg">
+            <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:mb-6 md:text-5xl bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent text-center">
+              Get Started Now!
+            </h1>
+            <h2 className="mb-6 text-lg text-white/60 text-center">
+              Sign in quickly using
+            </h2>
+            <div className="flex flex-col items-center gap-4">
+              <SignInWithGitHubButton />
+              <SignInWithGoogleButton />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80" />
+    </div>
   );
 }

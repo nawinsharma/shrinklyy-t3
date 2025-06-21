@@ -1,5 +1,5 @@
 'use client'
-
+import { motion } from 'framer-motion';
 import type { User } from 'next-auth'
 import { signOut } from 'next-auth/react'
 
@@ -10,7 +10,6 @@ import Profile from '@/app/dashboard/ui/Profile'
 import Logo from '@/components/Logo'
 
 import { LogOut } from 'lucide-react'
-import { ModeToggle } from '@/components/ModeToggle'
 
 const DashboardNavbar = ({ image, name }: User) => {
   const handleSignOut = async () => {
@@ -18,22 +17,25 @@ const DashboardNavbar = ({ image, name }: User) => {
   }
 
   return (
-    <nav className='flex justify-between pb-4 pt-6'>
+    <motion.nav 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1], delay: 0.2 }}
+      className='flex justify-between py-6'
+    >
       <Logo />
-      <menu className='flex items-center gap-2'>
+      <menu className='flex items-center gap-4'>
         <Profile image={image} name={name} />
-        <ModeToggle />
         <Button
           variant='destructive'
-          className='bg-red-500 hover:bg-red-600'
+          className='rounded-full bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 hover:text-red-300 transition-all duration-300'
           size='icon'
           onClick={handleSignOut}
         >
           <LogOut className='h-5 w-5' />
         </Button>
-
       </menu>
-    </nav>
+    </motion.nav>
   )
 }
 

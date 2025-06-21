@@ -19,6 +19,7 @@ export default async function RedirectLink({
       await api.shortLink.getShortLinkById.query(shortLinkId)
 
     if (shortLinkById !== null)
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       return permanentRedirect(shortLinkById.originalUrl)
   }
 
@@ -27,6 +28,7 @@ export default async function RedirectLink({
   )
 
   if (shortLinkByAlias !== null)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     return permanentRedirect(shortLinkByAlias.originalUrl)
 
   return redirect('/')

@@ -24,7 +24,10 @@ const DeleteShortLinkMenuItem = ({ shortLinkId }: Props) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <DropdownMenuItem onSelect={handleOpenDeleteConfirmationModal}>
+        <DropdownMenuItem 
+          onSelect={handleOpenDeleteConfirmationModal}
+          className='text-white hover:text-white hover:bg-red-500/20 focus:bg-red-500/20 focus:text-white'
+        >
           <Trash className='mr-2 h-4 w-4' />
           <span>Delete</span>
         </DropdownMenuItem>

@@ -22,14 +22,14 @@ const ShortLinkOptionsMenu = ({ shortLink, shortLinkUrl }: Props) => {
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger
         asChild
-        className='invisible group-hover/card:visible'
+        className='visible'
       >
-        <IconButton className='invisible absolute right-2 top-2 rounded-full border-2 border-transparent transition-colors duration-300 active:border-gray-400 group-hover/card:visible'>
-          <IoEllipsisVerticalSharp />
+        <IconButton className='visible rounded-full border border-white/[0.1] bg-white/[0.05] hover:bg-white/[0.1] hover:border-white/[0.2] transition-all duration-200 backdrop-blur-sm'>
+          <IoEllipsisVerticalSharp className='text-white/60 hover:text-white' />
         </IconButton>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
+      <DropdownMenuContent className='bg-white/[0.05] border border-white/[0.1] backdrop-blur-sm'>
         <DropdownMenuGroup>
           <CopyShortLinkUrlMenuItem shortLinkUrl={shortLinkUrl} />
           <UpdateShortLinkMenuItem

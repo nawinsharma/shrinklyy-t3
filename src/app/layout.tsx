@@ -4,7 +4,6 @@ import '@/styles/globals.css'
 import { TRPCReactProvider } from '@/trpc/react'
 
 import { Toaster } from '@/components/ui/toaster'
-import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata = {
   title: 'Url-shortner',
@@ -21,14 +20,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`font-sans relative min-h-screen`}>
         <TRPCReactProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
             {children}
-          </ThemeProvider>
         </TRPCReactProvider>
         <Toaster />
       </body>

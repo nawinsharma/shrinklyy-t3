@@ -29,12 +29,12 @@ const CopyShortLinkUrlIconButton = ({ shortLinkUrl }: Props) => {
       <TooltipShad>
         <TooltipTrigger>
           <IoCopyOutline
-            className='inline-block cursor-pointer align-middle text-xl leading-none'
+            className='inline-block cursor-pointer align-middle text-lg leading-none text-white/60 hover:text-blue-400 transition-colors duration-200'
             onClick={handleCopyShortLinkUrl}
           />
         </TooltipTrigger>
-        <TooltipContent side='bottom' className='px-2.5 py-2'>
-          <p className='p-0 text-xs'>Copy</p>
+        <TooltipContent side='bottom' className='px-2.5 py-2 bg-white/[0.1] border border-white/[0.1] backdrop-blur-sm'>
+          <p className='p-0 text-xs text-white'>Copy</p>
         </TooltipContent>
       </TooltipShad>
     </TooltipProvider>

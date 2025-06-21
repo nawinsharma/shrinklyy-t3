@@ -58,21 +58,23 @@ const UpdateShortLinkFormModal = ({
   })
 
   return (
-    <DialogContent>
+    <DialogContent className='max-w-2xl rounded-2xl border border-white/[0.08] bg-black/[0.5] p-8 backdrop-blur-md'>
       <form
-        className='flex flex-col gap-2'
+        className='flex flex-col gap-6'
         onSubmit={handleUpdateShortLinkSubmit}
       >
-        <h5 className='text-center text-2xl font-semibold'>
-          Update short link
-        </h5>
-
+        <h2 className='text-center text-3xl font-bold'>
+          <span className='bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent'>
+            Update Short Link
+          </span>
+        </h2>
+        
         <Input
           fullWidth
+          label="Alias"
           {...register('alias')}
           defaultValue={defaultValues?.alias ?? ''}
-          placeholder='Alias'
-          className='bg-gray-100 dark:bg-gray-800 text-black dark:text-white'
+          placeholder='my-short-link'
           error={!!errors.alias}
           errorMessage={errors.alias?.message}
         />
@@ -80,16 +82,20 @@ const UpdateShortLinkFormModal = ({
         <Input
           multiline
           fullWidth
+          label="Description"
           {...register('description')}
-          placeholder='Description'
-          className='bg-gray-100 dark:bg-gray-800 text-black dark:text-white'
+          placeholder='A short description for your link.'
           error={!!errors.description}
           errorMessage={errors.description?.message}
         />
 
-        <Button className='w-full' disabled={isLoading}>
+        <Button 
+          className='group relative mt-4 w-full overflow-hidden rounded-xl border border-white/20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:from-blue-500/30 hover:to-purple-500/30 disabled:opacity-50'
+          disabled={isLoading}
+        >
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-          Save
+          Update Link
+          <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-blue-400 transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-blue-400/20"></div>
         </Button>
       </form>
     </DialogContent>

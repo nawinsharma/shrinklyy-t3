@@ -27,7 +27,10 @@ const UpdateShortLinkMenuItem = ({ shortLinkId, defaultData }: Props) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <DropdownMenuItem onSelect={handleOpenFormUpdate}>
+        <DropdownMenuItem 
+          onSelect={handleOpenFormUpdate}
+          className='text-white hover:text-white hover:bg-white/[0.1] focus:bg-white/[0.1] focus:text-white'
+        >
           <Edit className='mr-2 h-4 w-4' />
           <span>Edit</span>
         </DropdownMenuItem>

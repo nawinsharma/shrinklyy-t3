@@ -19,7 +19,10 @@ const CopyShortLinkUrlMenuItem = ({ shortLinkUrl }: Props) => {
   }
 
   return (
-    <DropdownMenuItem onClick={handleCopyShortLinkUrl}>
+    <DropdownMenuItem 
+      onClick={handleCopyShortLinkUrl}
+      className='text-white hover:text-white hover:bg-white/[0.1] focus:bg-white/[0.1] focus:text-white'
+    >
       <Copy className='mr-2 h-4 w-4' />
       <span>Copy</span>
     </DropdownMenuItem>

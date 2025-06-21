@@ -69,19 +69,6 @@ function Home() {
 
       <div className='container relative z-10 mx-auto px-4 md:px-6'>
         <div className='mx-auto max-w-4xl text-center'>
-          {/* Brand Badge */}
-          <motion.div
-            variants={fadeUpVariants}
-            initial='hidden'
-            animate='visible'
-            className='mb-8 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 md:mb-12'
-          >
-            <Link className='h-4 w-4 text-blue-400' />
-            <span className='text-sm tracking-wide text-white/60'>
-              URL Shortener
-            </span>
-          </motion.div>
-
           {/* Interactive Brand Name */}
           <motion.div
             variants={fadeUpVariants}
@@ -160,11 +147,11 @@ function Home() {
               </div>
               <div className='space-y-3 text-left'>
                 <div className='text-sm text-white/40'>Original URL:</div>
-                <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-sm text-white/60'>
+                <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-xs sm:text-sm text-white/60 break-all'>
                   https://example.com/very/long/url/that/needs/shortening/take/a/look/at/this/url/njadcndndksajcnasjkcmkds
                 </div>
                 <div className='text-sm text-white/40'>Shortened URL:</div>
-                <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-sm text-blue-400'>
+                <div className='rounded-lg border border-white/[0.05] bg-white/[0.02] p-3 font-mono text-xs sm:text-sm text-blue-400 break-all'>
                   trim.nawin.xyz/short
                 </div>
               </div>

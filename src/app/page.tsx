@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Link, Zap } from 'lucide-react'
+import { Zap } from 'lucide-react'
 import LandingNavbar from '@/components/LandingNavbar'
 import AnimatedGradient from '@/components/AnimatedGradient'
 import ElegantShape from '@/components/ElegantShape'
